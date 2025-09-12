@@ -31,7 +31,7 @@
 
 
 
-## Architecture (Trying to implement this fully but will take time)
+## Architecture Design (*Future)
 ![Architecture](architecture_designs/Architecture.png)
 
 
