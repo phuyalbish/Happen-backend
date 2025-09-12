@@ -1,5 +1,5 @@
 # Happen-backend
-## An event management system which serves the problem of searching, managing and listing everything related to events.
+## An event management system which solves the problem of searching, managing and listing everything related to events.
 
 ### ************************************
 
