@@ -33,3 +33,6 @@
 
 ## Architecture (Trying to implement this fully but will take time)
 ![Architecture](architecture_designs/Architecture.png)
+
+
+## ********
