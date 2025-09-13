@@ -11,6 +11,8 @@ import java.util.List;
 @RequestMapping("/api/events")
 public class EventController {
 
+
+
     private EventService eventService;
 
     public EventController(EventService eventService) {

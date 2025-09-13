@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 public class VenueServiceImpl implements VenueService {
 
     private VenueRepository venueRepository;
-
     public VenueServiceImpl(VenueRepository venueRepository) {
         this.venueRepository = venueRepository;
     }
