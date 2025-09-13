@@ -29,10 +29,6 @@ public class EventRegistration {
     @JoinColumn(name = "event_id")
     private Event event;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "user_id")
-//    private User user;
-
     @Column(name = "event_registration_date", nullable = false)
     private LocalDateTime registrationDate = LocalDateTime.now();
 

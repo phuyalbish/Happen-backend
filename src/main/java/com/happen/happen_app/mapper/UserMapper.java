@@ -1,11 +1,8 @@
 package com.happen.happen_app.mapper;
 
 import com.happen.happen_app.dto.UserDto;
-import com.happen.happen_app.entity.Role;
 import com.happen.happen_app.entity.User;
 
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class UserMapper {
 

@@ -43,18 +43,9 @@ public class RoleServiceImpl implements RoleService {
         Role role = roleRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Role does not exist"));
         role.setId(dto.getId());
-        role.setRolename(dto.getRolename());
-        role.setEmail(dto.getEmail());
-        role.setPassword(dto.getPassword());
-        role.setFirstname(dto.getFirstname());
-        role.setLastname(dto.getLastname());
-        role.setPhone(dto.getPhone());
-        role.setProfileUrl(dto.getProfileUrl());
-        role.setIsActive(dto.getIsActive());
-        role.setIsEmailVerified(dto.getIsEmailVerified());
+        role.setName(dto.getName());
+        role.setDescription(dto.getDescription());
         role.setCreatedAt(dto.getCreatedAt());
-        role.setUpdatedAt(dto.getUpdatedAt());
-        role.setRoles(dto.getRoles());
         Role updatedRole = roleRepository.save(role);
         return RoleMapper.mapToRoleDto(updatedRole);
     }

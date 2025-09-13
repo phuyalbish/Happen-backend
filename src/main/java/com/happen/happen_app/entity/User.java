@@ -6,9 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.Duration;
-import java.util.Map;
-import java.util.HashMap;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +40,6 @@ public class User {
     @Column(name = "user_lastname")
     private String lastname;
 
-
     @Column(name = "user_phone")
     private String phone;
 
@@ -76,8 +72,6 @@ public class User {
     public String  getFullName() {
         return firstname + lastname;
     }
-
-
 
     public boolean hasRole(String roleName) {
         if (roles == null || roles.isEmpty()) {
