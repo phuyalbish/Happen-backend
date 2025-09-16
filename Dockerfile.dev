@@ -1,0 +1,16 @@
+FROM openjdk:17-jdk-slim
+LABEL authors="vishope"
+
+# Set working directory
+WORKDIR /app
+
+RUN apt-get update && \
+    apt-get install -y maven git && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY pom.xml .
+
+EXPOSE 8080 5005
+
+# Run Spring Boot in dev mode with DevTools
+CMD ["mvn", "spring-boot:run", "-Dspring-boot.run.fork=false"]

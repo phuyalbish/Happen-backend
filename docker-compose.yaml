@@ -17,17 +17,25 @@ services:
       retries: 5
 
   app:
-    build: .
-    container_name: spring-app
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: spring-app-dev
     depends_on:
       mysql:
         condition: service_healthy
     ports:
       - "8080:8080"
+      - "5005:5005"
+    volumes:
+      - ./src:/app/src
+      - ./pom.xml:/app/pom.xml
+      - ~/.m2:/root/.m2
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/happenDB
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: HappenPassword@123!
+      SPRING_PROFILES_ACTIVE: dev
 
 volumes:
   mysql_data:
